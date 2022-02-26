@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Products</title>
+    <script src="https://kit.fontawesome.com/02fe88b6d5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../header/header.css">
+
+    <style>
+        #container {
+            /* border: 1px solid yellow; */
+            width: 92%;
+            margin: auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-gap: 30px;
+        }
+
+        #leftDiv {
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: 14.2% 84%;
+            grid-gap: 2%;
+        }
+
+        /* #leftDiv>div {
+            border: 1px solid green;
+        } */
+
+        #lf {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #lf>div {
+            margin-bottom: 15px;
+        }
+
+        #rt-img {
+            width: 620px;
+            height: 620px;
+        }
+
+        #lf-1,
+        #lf-2 {
+            width: 116px;
+        }
+
+        #rightDiv {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #prod-name {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+        }
+
+        #prod-price {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        #qty {
+            width: 60px;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        #prod-qty {
+            margin-bottom: 5px;
+        }
+
+        #add-basket {
+            width: 300px;
+            height: 45px;
+            cursor: pointer;
+            font-family: Avenir Medium, sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: .24rem;
+            line-height: normal;
+            min-height: 45px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            background-color: teal;
+            color: white;
+            /* transition-duration: .2s; */
+            /* transition-property: color, background-color, border-color; */
+        }
+
+        #add-basket:hover {
+            background-color: #fdfdf9;
+            border: 1px solid #4b5666;
+            color: #4b5666;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header code -->
+    <div id="first-div">
+        <a href="" id="signup">Sign Up</a>
+        <a href="" id="signin">Sign In /</a>
+        <a href="" id="lang">English ($)</a>
+    </div>
+    <div id="sec-div">
+        <button type="button" id="btn-cart">
+            <span class="material-icons">shopping_bag</span>
+            <span id="btn-num"></span>
+        </button>
+
+
+        <input type="search" name="search" id="search" placeholder="Search AnthroLiving"><i
+            class="fa-solid fa-magnifying-glass"></i>
+
+
+
+        <div id="space"></div>
+        <div id="anthro"><img
+                src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
+                alt="" srcset=""></div>
+        <div id="anthro-1"><img
+                src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="" srcset=""></div>
+        <div id="space-1"></div>
+    </div>
+    <div id="menu-bar">
+        <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Decor</a></li>
+            <li><a href="#">Kitchen & Dining</a></li>
+            <li><a href="#">Candles</a></li>
+            <li><a href="#">Bedding</a></li>
+            <li><a href="#">Bath</a></li>
+            <li><a href="#">Stationary</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Outdoor</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+    </div>
+    <!-- header code -->
+
+    <div id="container">
+        <div id="leftDiv">
+
+            <div id="lf">
+
+                <div id="lfD1">
+                    <img id="lf-1" src="" alt="" srcset="">
+                </div>
+
+                <div id="lfD2">
+                    <img id="lf-2" src="" alt="" srcset="">
+                </div>
+
+            </div>
+
+            <div id="rt">
+                <img id="rt-img" src="" alt="" srcset="">
+            </div>
+        </div>
+
+        <div id="rightDiv">
+            <label for="prod-name" id="prod-name">Zinnia Outdoor Daybed Cushion</label>
+            <label for="prod-price" id="prod-price">$1,398.00</label>
+            <label for="prod-qty" id="prod-qty">Qty*</label>
+            <select name="qty" id="qty">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <button id="add-basket">ADD TO BASKET</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    document.getElementById('add-basket').addEventListener('click', updateCart2);
+
+    let [x] = JSON.parse(localStorage.getItem("Item"));
+
+
+    document.getElementById('lf-1').setAttribute('src', x.img1);
+    document.getElementById('lf-2').setAttribute('src', x.img2);
+    document.getElementById('rt-img').setAttribute('src', x.img1);
+    document.getElementById('prod-name').textContent = x.name;
+    document.getElementById('prod-price').textContent = x.price;
+
+
+
+
+    document.getElementById('lfD1').addEventListener('click', function () {
+        document.getElementById('lf-1').style.border = '1px solid';
+        document.getElementById('lf-2').style.border = '';
+        document.getElementById('rt-img').setAttribute('src', x.img1);
+    });
+
+
+
+    document.getElementById('lfD2').addEventListener('click', function () {
+        document.getElementById('lf-2').style.border = '1px solid';
+        document.getElementById('lf-1').style.border = '';
+        document.getElementById('rt-img').setAttribute('src', x.img2);
+    });
+
+
+
+
+    updateCart();
+    function updateCart() {
+        let qty = localStorage.getItem('qty') | 0;
+        document.getElementById('btn-num').textContent = qty;
+        if (qty === 0) {
+            document.getElementById('btn-num').style.display = "none";
+        }
+    }
+
+    let arr = JSON.parse(localStorage.getItem('cart')) || [];
+    function updateCart2() {
+
+        if (arr.length !== 0 && x.id === arr[arr.length - 1].id) {
+            // console.log("not zero", arr);
+        }
+        else {
+            arr.push(x);
+            console.log(arr);
+
+            let qty = localStorage.getItem("qty") | 0;
+            qty = qty + +(document.getElementById('qty').value);
+            document.getElementById('btn-num').textContent = qty;
+            localStorage.setItem("qty", qty);
+
+            if (qty === 0) {
+                document.getElementById('btn-num').textContent = "";
+                document.getElementById('btn-num').style.backgroundColor = 'none';
+            }
+        }
+
+        localStorage.setItem("cart", JSON.stringify(arr));
+    }
+</script>

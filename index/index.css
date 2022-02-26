@@ -1,0 +1,62 @@
+#container {
+    width: 92%;
+    margin-left: 90px;
+}
+
+#container>div {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+#div-4,
+#div-6,
+#div-8,
+#div-10 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#div-4 a,
+#div-6 a,
+#div-8 a,
+#div-10 a {
+    color: #167a92;
+    font-size: 0.98em;
+    margin-top: 25px;
+}
+
+#div-4>div,
+#div-6>div,
+#div-8>div,
+#div-10>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#div-7 {
+    display: flex;
+    flex-direction: column;
+}
+
+#div-7 a,#div-8 a {
+    margin-top: 20px;
+    color: #167a92;
+    text-align: center;
+}
+
+#div-10>div>img+p,#div-8>div>img+p {
+    font: 1.5rem Spectral Extra Light, serif;
+    margin-bottom: 10px;
+    color: rgb(38, 38, 44);
+    
+}
+#div-8>div>img+p ,#div-8>div>p+p{
+    text-align: center;
+}
+#div-10>div>p+p,#div-8>div>p+p {
+    font: 0.83rem Avenir Book, sans-serif;
+    letter-spacing: .09rem;
+    margin-bottom: 10px;
+    color: rgb(38, 38, 44);
+}

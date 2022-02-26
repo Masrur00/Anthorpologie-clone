@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+
+    <script src="https://kit.fontawesome.com/02fe88b6d5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../header/header.css">
+
+    <style>
+        
+        #container-cart{
+            margin: auto;
+            display: flex;
+            width: 92%;
+            height: 600px;
+            border: 1px solid red;
+        }
+
+        #left-div{
+            flex: 7;
+            border: 1px solid green;
+        }
+
+        #right-div{
+            flex: 3;
+            border: 1px solid black;
+        }
+
+        #basket{
+            display: flex;
+            align-content: space-between;
+            /* padding: 10px 0px ; */
+            margin-bottom: 35px;
+            margin-top: 25px;
+            border-bottom: 1px solid #e5e2de;            
+        }
+
+        #in-delivery{
+            /* border: 1px solid grey; */
+            margin-left: 370px;
+            flex:2;
+            color: #5c5c5f;            
+            font-size: 0.4rem;
+            font: 0.8rem Avenir Medium, sans-serif;            
+            letter-spacing: .09rem;  
+            padding: 0px 0px 0px 0px;          
+        }
+
+        #in-basket{
+            flex:8;
+            color: black;            
+            font-size: 0.7rem;
+            font: 1.5rem Avenir Medium, sans-serif;            
+            letter-spacing: .06rem;            
+        }
+
+        #item{
+            display: flex;
+            align-content: space-between;
+            padding: 10px 8px ;
+            margin-bottom: 35px;
+            margin-top: 25px;
+            border-bottom: 1px solid #e5e2de;  
+        }
+
+        #item-head{
+            flex: 4;
+        }
+
+        #item-price{
+            flex: 2;
+        }
+
+        #quantity{
+            flex: 2;
+        }
+
+        #total-price{
+            flex: 2;
+        }
+
+        #prod-quan{
+            display: flex;
+            flex-direction: row;
+        }
+        #img-div{
+            width: 50px;
+            height: 150px;
+            border: 1px solid yellow;
+            margin-left: 5px;
+        }
+        #pro-desc{
+
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+
+    <div id="first-div">
+        <a href="" id="signup">Sign Up</a>
+        <a href="" id="signin">Sign In /</a>
+        <a href="" id="lang">English ($)</a>
+    </div>
+    <div id="sec-div">
+        <button type="button" id="btn-cart">
+            <span class="material-icons">shopping_bag</span>
+            <span id="btn-num">2</span>
+        </button>
+
+
+        <input type="search" name="search" id="search" placeholder="Search AnthroLiving"><i
+            class="fa-solid fa-magnifying-glass"></i>
+
+
+
+        <div id="space"></div>
+        <div id="anthro"><img
+                src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
+                alt="" srcset=""></div>
+        <div id="anthro-1"><img
+                src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="" srcset=""></div>
+        <div id="space-1"></div>
+    </div>
+    <div id="menu-bar">
+        <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Decor</a></li>
+            <li><a href="#">Kitchen & Dining</a></li>
+            <li><a href="#">Candles</a></li>
+            <li><a href="#">Bedding</a></li>
+            <li><a href="#">Bath</a></li>
+            <li><a href="#">Stationary</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Outdoor</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+    </div>
+
+    <!-- header section -->
+
+
+    <div id="container-cart">
+          <div id="left-div">
+              <div id="basket">
+                    <div id="in-basket">Basket</div>
+                    <div id="in-delivery">Delivery option</div>
+              </div> 
+              <div id="item">
+                    <div id="item-head">Item</div>
+                    <div id="item-price">Item Price</div>
+                    <div id="quantity">Quantity</div>
+                    <div id="total_price">Total Price</div>
+              </div>
+              <div id="prod-quan">
+                    <div id="img-div">
+                        <img id="img" src="" alt="">
+                    </div>
+                    <div id="pro-desc">
+
+                    </div>
+                    <div id="prod-price">
+
+                    </div>
+                    <div id="prod-quan">
+
+                    </div>
+                    <div id="prod-total-price">
+
+                    </div>
+              </div>
+          </div>
+          <div id="right-div">
+              <div></div>
+              <div></div>
+          </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if(cart.length !== 0){
+        cart.map(function(){
+            let div = document.createElement('div');
+            div.setAttribute('class',)
+        })
+    }
+</script>

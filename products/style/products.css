@@ -1,0 +1,119 @@
+.product-heading {
+    color: inherit;
+    font: 0.8rem Avenir Medium, sans-serif;
+    letter-spacing: .06rem;
+    margin-bottom: 0;
+}
+
+.current-price {
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+#container,
+#container-head {
+    margin: auto;
+    width: 92%;
+    display: flex;
+    /* border: 5px solid black; */
+}
+
+#left-side {
+    flex: 1.5;
+    /* border: 1px solid red; */
+    padding: 20px 15px;
+}
+
+#products {
+    flex: 8.5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    /* border: 1px solid yellowgreen; */
+}
+
+
+
+#products img {
+    width: 276px;
+}
+
+#top-img {
+    width: 92%;
+    margin: auto;
+}
+
+#top-img img {
+    width: 100%;
+
+}
+
+#second-heading {
+    border-bottom: 1px solid #e5e2de;
+    color: var(--text-dark);
+    font: 0.9 rem Avenir Medium, sans-serif;
+    letter-spacing: .06rem;
+    margin-bottom: 0;
+    padding: 10px 0px 10px 0px;
+}
+
+#left-head {
+    flex: 1.5;            
+}
+
+#pro-head {
+    flex: 8.5;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+}
+
+#pro-speciality {
+    flex: 8;
+    font-size: large;
+    padding: 10px 3px;
+}
+
+#pro-filter {
+    flex: 3;
+}
+
+#sort {
+    background-color: #fdfdf9;
+    border: 1px solid #939395;
+    border-radius: 3px;
+    color: #5c5c5f;
+    font: 0.8rem Avenir Book, sans-serif;
+    font-size: 0.9rem;
+    height: 35px;
+    letter-spacing: .06rem;
+    padding: 0 9px;
+    width: 65%;
+}
+
+#sort-label {
+    color: var(--text-dark);
+    display: inline-flex;
+    font: 0.8rem Avenir Medium, sans-serif;
+    letter-spacing: .06rem;
+    margin-right: 15px;
+}
+
+#main-prod {
+    
+    color: rgb(9, 153, 172);
+    font: 0.7rem sans-serif;
+    letter-spacing: .09rem;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+.left-link{            
+    display: block;
+    color: #5c5c5f;            
+    font-size: 0.7rem;
+    font: 0.8rem Avenir Medium, sans-serif;            
+    letter-spacing: .06rem;            
+    margin-bottom: 15px;
+    text-decoration: none;
+}
