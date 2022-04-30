@@ -7,11 +7,11 @@
 
 <h2>Video link:  </h2>
 <p> we have shared a demo presentation of this project "meesho-Clone". </p>
-https://drive.google.com/file/d/1-0P7yiPrVxaUn1ze5VNv9s9ROUZ8ctBA/view?usp=sharing
+https://drive.google.com/file/d/1KaY7ic7FS1cSb3UF1kIXbg2XQRWH5u0k/view?usp=sharing
 
 
 <h2> Deployed Link </h2>
-https://meesho-clone-masaiweb15.netlify.app/
+https://anthorpologie-clone.vercel.app/
 
 
 <h2> Snapshots </h2>
